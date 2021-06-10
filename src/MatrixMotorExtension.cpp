@@ -20,6 +20,7 @@ bool MatrixMotor::begin(uint8_t ver, uint8_t ch){
 }
 
 float MatrixMotor::getVbat(){
+	i2cMUXSelect();
 	return i2cReadData(Battery_Voltage)*0.033;
 }
 
