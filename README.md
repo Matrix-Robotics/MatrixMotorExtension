@@ -1,5 +1,5 @@
 # Matrix Motor Extension Arduino Library
-Matrix Motor Extension is an 4 channel DC motor controller,
+Matrix Motor Extension is a 4 channel DC motor controller,
 communicate by I2C interface.
 ## Features
 4 channel/8-bit full-bridge DC motor control.
