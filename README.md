@@ -2,7 +2,7 @@
 Matrix Motor Extension is a 4 channel DC motor controller,
 communicate by I2C interface.
 ## Features
-4 channel/8-bit full-bridge DC motor control.<br>
+Support 4 channel/8-bit full-bridge DC motor control.<br>
 Battery voltage monitor.
 ## Repository Contents
 * [**/docs**](./docs) - Matrix Motor Extension documentation.
