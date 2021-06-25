@@ -22,7 +22,7 @@ typedef enum __MotorRegType
 
 class MatrixMotor{
 private:
-	uint8_t _ch, _ver;
+	uint8_t _ch=0, _ver=1;
   uint8_t _reverse1 = 0, _reverse2 = 0, _reverse3 = 0, _reverse4 = 0;
   uint8_t pwmChannel;
 	uint8_t i2cReadData(MotorRegType reg);
@@ -31,7 +31,7 @@ private:
   void channelReverse(uint8_t dir);
 public:
 	friend class MiniI2C;
-	bool begin(uint8_t ver=1, uint8_t ch=0);
+	bool begin();
 	float getVbat();
 	void setPWM(MotorRegType ch, int speed);
 };

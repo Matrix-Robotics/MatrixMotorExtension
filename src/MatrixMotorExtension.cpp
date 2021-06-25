@@ -1,9 +1,7 @@
 #include "MatrixMotorExtension.h"
 
-bool MatrixMotor::begin(uint8_t ver, uint8_t ch){
+bool MatrixMotor::begin(){
 	Wire.begin();
-	_ver = ver;
-	_ch = ch;
 	i2cMUXSelect();
 	delay(50);
 	if(i2cReadData(Device_ID) == 0x45){
