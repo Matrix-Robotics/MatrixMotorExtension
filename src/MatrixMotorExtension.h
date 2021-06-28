@@ -33,7 +33,7 @@ public:
 	friend class MiniI2C;
 	bool begin();
 	float getVbat();
-	void setPWM(MotorRegType ch, int speed);
+	void setPWM(int ch, int speed);
 };
 
 #endif

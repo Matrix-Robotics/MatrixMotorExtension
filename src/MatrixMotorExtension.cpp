@@ -22,17 +22,20 @@ float MatrixMotor::getVbat(){
 	return i2cReadData(Battery_Voltage)*0.033;
 }
 
-void MatrixMotor::setPWM(MotorRegType ch, int speed){
+void MatrixMotor::setPWM(int ch, int speed){
 	i2cMUXSelect();
-	pwmChannel = ch;
-	if(speed < 0){
-		speed *= -1;
-		channelReverse(1);
+	if(ch > 0 && ch < 5){
+		pwmChannel = ch;
+		if(speed < 0){
+			speed *= -1;
+			channelReverse(1);
+		}
+		else{
+			channelReverse(0);
+		}
+		i2cWriteData(MotorRegType(ch+4), speed);
 	}
-	else{
-		channelReverse(0);
-	}
-	i2cWriteData(ch, speed);
+
 }
 
 void MatrixMotor::channelReverse(uint8_t dir){
