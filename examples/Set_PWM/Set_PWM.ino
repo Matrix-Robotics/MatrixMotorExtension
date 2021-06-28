@@ -7,8 +7,11 @@ void setup()
     Serial.begin(115200);
     Serial.print("Starting...\n");
     if (Motor.begin()){
-        Serial.print("Motor Extension Activated");
-    };
+        Serial.println("Motor Extension Activated");
+    }
+    else{
+        Serial.println("Motor Extension activation failed");
+    }
 }
 
 void loop()
