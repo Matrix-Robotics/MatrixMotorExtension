@@ -28,9 +28,9 @@ void setPWM(int ch, int speed)
 ***
 <br />
 
-## Get Battray Voltage
+## Get Battery Voltage
 
-Get battray **voltage** of controller.
+Get battery **voltage** of controller.
 
 ```Arduino
 float getVbat()
