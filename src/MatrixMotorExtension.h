@@ -10,20 +10,20 @@
 
 #define MatrixMotor_ADDR 0x24
 
-typedef enum __MotorRegType
-{
-  Device_ID = 1,
-  Device_Control_1,
-  Device_Control_2, 
-  Battery_Voltage,
-  CH1_PWM,
-  CH2_PWM,
-  CH3_PWM,
-  CH4_PWM
-} MotorRegType;
-
 class MatrixMotor{
 private:
+  typedef enum __MotorRegType
+  {
+    Device_ID = 1,
+    Device_Control_1,
+    Device_Control_2, 
+    Battery_Voltage,
+    CH1_PWM,
+    CH2_PWM,
+    CH3_PWM,
+    CH4_PWM
+  } MotorRegType;
+
 	uint8_t _ch=0, _ver=1;
   uint8_t _reverse1 = 0, _reverse2 = 0, _reverse3 = 0, _reverse4 = 0;
   uint8_t pwmChannel;
