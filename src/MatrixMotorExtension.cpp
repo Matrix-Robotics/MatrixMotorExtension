@@ -40,7 +40,7 @@ void MatrixMotor::setPWM(int ch, int speed){
 
 void MatrixMotor::channelReverse(uint8_t dir){
 
-	switch (pwmChannel){
+	switch (pwmChannel+4){
 		case CH1_PWM:
 			_reverse1 = dir; 
 			break;
