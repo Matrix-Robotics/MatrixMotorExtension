@@ -80,14 +80,14 @@ void MatrixMotor::i2cMUXSelect(){
 		Wire.write(_ch + 4);
 		Wire.endTransmission(1);
 
-		delay(10);
+		delayMicroseconds(300);
 		break;
 	case 3:
 		Wire.beginTransmission(ADDR_PCA954X);
 		Wire.write((1 << _ch));
 		Wire.endTransmission(1);
 		
-		delay(10);
+		delayMicroseconds(300);
 		break;
 	default:
 		break;
